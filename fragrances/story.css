@@ -351,6 +351,105 @@ blockquote {
   line-height: 1.7;
 }
 
+.profile-section {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 78% 50%, var(--glow), transparent 30%),
+    linear-gradient(145deg, #070706, #100e0a 56%, #070706);
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(330px, 0.72fr);
+  gap: clamp(48px, 9vw, 118px);
+  align-items: center;
+}
+
+.profile-copy > p {
+  max-width: 590px;
+  margin: 24px 0 0;
+}
+
+.coordinates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 31px;
+}
+
+.coordinate {
+  padding: 10px 13px;
+  border: 1px solid var(--line);
+  color: #d5cdbc;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.scent-map-frame {
+  position: relative;
+  width: min(100%, 470px);
+  aspect-ratio: 1;
+  justify-self: end;
+  padding: clamp(12px, 2vw, 22px);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 50% 50%, var(--glow), transparent 42%),
+    rgba(4, 4, 3, 0.62);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.scent-map-frame::before {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(198, 168, 92, 0.1);
+  content: "";
+  pointer-events: none;
+}
+
+.scent-map {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.map-grid,
+.map-axis {
+  fill: none;
+  stroke: rgba(198, 168, 92, 0.24);
+  stroke-width: 1;
+}
+
+.map-grid:first-of-type {
+  stroke: rgba(198, 168, 92, 0.34);
+}
+
+.map-shape {
+  fill: var(--glow);
+  stroke: var(--accent);
+  stroke-linejoin: round;
+  stroke-width: 2;
+  filter: drop-shadow(0 0 10px var(--glow));
+}
+
+.map-point {
+  fill: var(--gold-light);
+  stroke: var(--black);
+  stroke-width: 2;
+}
+
+.map-label {
+  fill: #c8c0b1;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
 .notes-section {
   overflow: hidden;
 }
@@ -556,6 +655,16 @@ a:focus-visible {
   .status-card .button {
     justify-self: start;
   }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .scent-map-frame {
+    width: min(100%, 440px);
+    justify-self: center;
+  }
 }
 
 @media (max-width: 700px) {
@@ -650,6 +759,28 @@ a:focus-visible {
 
   .note-grid {
     margin-top: 34px;
+  }
+
+  .profile-layout {
+    gap: 34px;
+  }
+
+  .profile-copy > p {
+    margin-top: 18px;
+  }
+
+  .coordinates {
+    margin-top: 24px;
+  }
+
+  .scent-map-frame {
+    width: min(100%, 390px);
+    padding: 8px;
+  }
+
+  .map-label {
+    font-size: 8px;
+    letter-spacing: 1px;
   }
 
   .note {
