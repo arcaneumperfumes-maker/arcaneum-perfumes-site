@@ -505,6 +505,138 @@ blockquote {
   color: #bcb4a7;
 }
 
+.social-section {
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 18% 28%, var(--glow), transparent 27%),
+    linear-gradient(145deg, #070706, #100e0a 58%, #070706);
+}
+
+.social-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.76fr);
+  gap: clamp(48px, 9vw, 118px);
+  align-items: center;
+}
+
+.social-copy > p {
+  max-width: 600px;
+  margin: 24px 0 0;
+}
+
+.social-map-panel {
+  position: relative;
+  padding: clamp(28px, 4vw, 46px);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(198, 168, 92, 0.08), rgba(4, 4, 3, 0.62)),
+    rgba(4, 4, 3, 0.74);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.28);
+}
+
+.social-map-panel::before {
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(198, 168, 92, 0.1);
+  content: "";
+  pointer-events: none;
+}
+
+.social-axis-list {
+  position: relative;
+  display: grid;
+  gap: 27px;
+  margin: 0;
+}
+
+.social-axis-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 11px;
+}
+
+.social-axis-label dt,
+.social-axis-label dd {
+  margin: 0;
+}
+
+.social-axis-label dt {
+  color: #c9c1b3;
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.social-axis-label dd {
+  color: var(--ivory);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.social-meter {
+  height: 3px;
+  overflow: hidden;
+  background: rgba(198, 168, 92, 0.16);
+}
+
+.social-meter > span {
+  display: block;
+  width: var(--level);
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--gold-light));
+  box-shadow: 0 0 18px var(--glow);
+}
+
+.social-moments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: clamp(46px, 7vw, 82px);
+  border: 1px solid var(--line);
+  background: var(--line);
+  gap: 1px;
+}
+
+.social-moment {
+  min-height: 235px;
+  padding: clamp(27px, 3.6vw, 39px);
+  background: rgba(7, 7, 6, 0.94);
+}
+
+.social-phase {
+  display: block;
+  margin-bottom: 36px;
+  color: var(--gold-light);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.02rem;
+}
+
+.social-moment h3 {
+  color: var(--ivory);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.social-moment p {
+  margin: 15px 0 0;
+  color: #a9a193;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.social-copy > .social-note {
+  margin: 22px 0 0;
+  color: #827a6e;
+  font-size: 0.69rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+}
+
 .status-section {
   border-top: 1px solid var(--line);
 }
@@ -661,6 +793,15 @@ a:focus-visible {
     gap: 44px;
   }
 
+  .social-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .social-moments {
+    grid-template-columns: 1fr;
+  }
+
   .scent-map-frame {
     width: min(100%, 440px);
     justify-self: center;
@@ -767,6 +908,27 @@ a:focus-visible {
 
   .profile-copy > p {
     margin-top: 18px;
+  }
+
+  .social-copy > p {
+    margin-top: 18px;
+  }
+
+  .social-map-panel {
+    padding: 28px 23px;
+  }
+
+  .social-axis-label dd {
+    font-size: 1.18rem;
+  }
+
+  .social-moment {
+    min-height: 0;
+    padding: 28px;
+  }
+
+  .social-phase {
+    margin-bottom: 25px;
   }
 
   .coordinates {
