@@ -62,13 +62,17 @@
     .badge{position:absolute;z-index:4;top:22px;right:22px;border:1px solid rgba(241,219,146,.48);padding:8px 11px;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;background:rgba(5,5,4,.48);backdrop-filter:blur(8px)}
     .art-svg{width:100%;height:100%;object-fit:cover;object-position:center}
 
-    /* House signatures — four distinct emotional doors into ARCANEUM */
+    /* House signatures — ordered from shadow to sunlight */
     .signatures{padding-top:18px}
     .signature-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:end;margin-bottom:38px}
     .signature-head p{max-width:650px;margin:0}
     .signature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
-    .signature{min-height:310px;padding:28px 24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;position:relative;background:linear-gradient(155deg,rgba(19,16,11,.72),rgba(8,8,7,.98));transition:background .25s,transform .25s}
-    .signature:hover,.signature:focus-visible{background:linear-gradient(155deg,rgba(30,24,14,.9),rgba(9,8,7,.98));transform:translateY(-2px)}
+    .signature{min-height:310px;padding:28px 24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;position:relative;background:linear-gradient(155deg,rgba(19,16,11,.72),rgba(8,8,7,.98));transition:filter .25s,transform .25s}
+    .signature-heavy{background:radial-gradient(circle at 78% 20%,rgba(91,78,64,.08),transparent 38%),linear-gradient(155deg,#0b0a09,#050505)}
+    .signature-ember{background:radial-gradient(circle at 78% 18%,rgba(130,64,31,.17),transparent 39%),radial-gradient(circle at 16% 80%,rgba(49,69,38,.09),transparent 38%),linear-gradient(155deg,#17110c,#080807)}
+    .signature-silver{background:radial-gradient(circle at 78% 18%,rgba(177,188,198,.17),transparent 39%),linear-gradient(155deg,#131619,#080807)}
+    .signature-light{background:radial-gradient(circle at 80% 16%,rgba(225,177,86,.22),transparent 40%),radial-gradient(circle at 15% 82%,rgba(55,84,48,.14),transparent 38%),linear-gradient(155deg,#1d1810,#0b0a08)}
+    .signature:hover,.signature:focus-visible{filter:brightness(1.13);transform:translateY(-2px)}
     .signature:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
     .signature-role{letter-spacing:.2em;text-transform:uppercase;font-size:.64rem;color:var(--gold2);margin-bottom:32px}
     .signature h3{font-size:clamp(1.9rem,2.9vw,2.8rem);line-height:.94}
@@ -244,18 +248,18 @@
 
 <section class="signatures" id="signatures">
 <div class="shell">
-<div class="signature-head"><div><div class="eyebrow">House Signatures</div><h2>Four forms of <span class="gold">presence.</span></h2></div><p>ARCANEUM is not one mood repeated in different bottles. These four worlds show the house at its clearest: control, transformation, instinct, and radiance.</p></div>
+<div class="signature-head"><div><div class="eyebrow">House Signatures</div><h2>Four forms of <span class="gold">presence.</span></h2></div><p>From shadow to sunlight, ARCANEUM moves through four distinct forms of presence: control, instinct, transformation, and radiance.</p></div>
 <div class="signature-grid">
-<a class="signature" href="fragrances/rex-noctis/" aria-label="Explore Rex Noctis — Control">
+<a class="signature signature-heavy" href="fragrances/rex-noctis/" aria-label="Explore Rex Noctis — Control">
 <div class="signature-role">Control</div><h3>REX NOCTIS</h3><div class="signature-line">Silence wears the crown.</div><p class="signature-arc">Cold authority becomes warm attraction.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
-<a class="signature" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
-<div class="signature-role">Transformation</div><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
-</a>
-<a class="signature" href="fragrances/wild-sovereign/" aria-label="Explore Wild Sovereign — Instinct">
+<a class="signature signature-ember" href="fragrances/wild-sovereign/" aria-label="Explore Wild Sovereign — Instinct">
 <div class="signature-role">Instinct</div><h3>WILD SOVEREIGN</h3><div class="signature-line">Refinement, undomesticated.</div><p class="signature-arc">Botanical light → apricot suede → warm skin → smoke.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
-<a class="signature" href="fragrances/vermillionaire/" aria-label="Explore VermillionAire — Radiance">
+<a class="signature signature-silver" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
+<div class="signature-role">Transformation</div><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
+</a>
+<a class="signature signature-light" href="fragrances/vermillionaire/" aria-label="Explore VermillionAire — Radiance">
 <div class="signature-role">Radiance</div><h3>VermillionAire</h3><div class="signature-line">Sunlight, cut with salt.</div><p class="signature-arc">Vermilion peel → salt-lit air → sun-warmed skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
 </div>
@@ -329,8 +333,8 @@
 <select name="fragrance">
 <option value="">The collection / undecided</option>
 <option>Rex Noctis</option>
-<option>Vesper Glass</option>
 <option>Wild Sovereign</option>
+<option>Vesper Glass</option>
 <option>VermillionAire</option>
 <option>Crimson Grove</option>
 <option>Sovereign Tide</option>
