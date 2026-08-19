@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Vesper Glass signature artwork</title>
+  <desc id="desc">Cold architectural glass and silver light gradually warming toward skin.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050607"/>
+      <stop offset="0.5" stop-color="#232a31"/>
+      <stop offset="0.76" stop-color="#737b82"/>
+      <stop offset="1" stop-color="#111315"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4f7" stop-opacity="0.46"/>
+      <stop offset="0.34" stop-color="#b5c0c8" stop-opacity="0.09"/>
+      <stop offset="0.62" stop-color="#6e777f" stop-opacity="0.27"/>
+      <stop offset="1" stop-color="#f5eee4" stop-opacity="0.16"/>
+    </linearGradient>
+    <radialGradient id="warm" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d9a980" stop-opacity="0.6"/>
+      <stop offset="0.46" stop-color="#aa7458" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#5a3728" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iris" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d9d6dd" stop-opacity="0.58"/>
+      <stop offset="1" stop-color="#8d8792" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="32"/></filter>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+      <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 0.07"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <ellipse cx="600" cy="1240" rx="470" ry="310" fill="url(#warm)" filter="url(#blur)"/>
+  <ellipse cx="770" cy="490" rx="280" ry="250" fill="url(#iris)" filter="url(#blur)"/>
+  <g transform="rotate(-8 600 720)">
+    <rect x="330" y="180" width="540" height="1010" rx="76" fill="#080b0e" fill-opacity="0.28" stroke="#d9e0e5" stroke-opacity="0.38" stroke-width="3"/>
+    <rect x="370" y="220" width="460" height="930" rx="58" fill="url(#glass)" stroke="#f4f8fa" stroke-opacity="0.13" stroke-width="2"/>
+    <path d="M398 1110L738 250" stroke="#f5f8fa" stroke-opacity="0.3" stroke-width="15"/>
+    <path d="M470 1145L805 310" stroke="#cbd3da" stroke-opacity="0.1" stroke-width="52"/>
+    <path d="M395 750L830 590" stroke="#f1f4f6" stroke-opacity="0.12" stroke-width="4"/>
+  </g>
+  <g fill="#eef2f4" fill-opacity="0.3">
+    <circle cx="445" cy="375" r="9"/><circle cx="495" cy="450" r="5"/><circle cx="735" cy="370" r="7"/>
+    <circle cx="780" cy="515" r="4"/><circle cx="505" cy="620" r="8"/><circle cx="705" cy="700" r="6"/>
+    <circle cx="425" cy="820" r="5"/><circle cx="765" cy="905" r="8"/><circle cx="585" cy="1030" r="6"/>
+  </g>
+  <g transform="translate(760 620)" fill="none" stroke="#dad4df" stroke-opacity="0.3" stroke-width="7">
+    <ellipse rx="42" ry="116" transform="rotate(0)"/>
+    <ellipse rx="42" ry="116" transform="rotate(60)"/>
+    <ellipse rx="42" ry="116" transform="rotate(120)"/>
+  </g>
+  <rect width="1200" height="1500" filter="url(#grain)" opacity="0.6"/>
+  <path d="M0 1280C220 1190 395 1245 555 1340C735 1446 930 1452 1200 1320V1500H0Z" fill="#7f5a46" fill-opacity="0.12"/>
+</svg>
