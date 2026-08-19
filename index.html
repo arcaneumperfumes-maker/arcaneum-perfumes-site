@@ -32,7 +32,7 @@
     .mark{display:flex;align-items:center;gap:13px;letter-spacing:.2em;font-size:.75rem}
     .mark img{width:54px;height:54px;object-fit:contain}
     .navlinks{display:flex;gap:28px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
-    .navlinks a{opacity:.72;transition:.25s} .navlinks a:hover{opacity:1;color:var(--gold2)}
+    .navlinks a{opacity:.72;transition:.25s}.navlinks a:hover{opacity:1;color:var(--gold2)}
     .hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:130px 0 70px}
     .hero:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 52% 38%,rgba(198,168,92,.17),transparent 24%),radial-gradient(circle at 75% 70%,rgba(88,58,31,.18),transparent 22%),linear-gradient(130deg,#050504 20%,#12100b 50%,#050504 80%);filter:saturate(.8)}
     .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
@@ -41,7 +41,7 @@
     .hero-copy{max-width:780px;font-size:clamp(1rem,2vw,1.25rem);margin:30px auto 40px;color:#c9c2b4}
     .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--gold);letter-spacing:.16em;text-transform:uppercase;font-size:.7rem;transition:.25s}
-    .btn.primary{background:var(--gold);color:#11100e} .btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(198,168,92,.16)}
+    .btn.primary{background:var(--gold);color:#11100e}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(198,168,92,.16)}
     section{padding:110px 0}
     .intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:end}
     .intro p{font-size:1.06rem;max-width:650px}
@@ -90,16 +90,16 @@
     .foot img{width:58px}
     @media (max-width:1020px){.signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:800px){
-      nav{height:70px} .navlinks{display:none} .mark span{display:none}
-      .hero{padding-top:110px} section{padding:82px 0}
+      nav{height:70px}.navlinks{display:none}.mark span{display:none}
+      .hero{padding-top:110px}section{padding:82px 0}
       .intro,.manifesto-grid,.signature-head{grid-template-columns:1fr;gap:35px}
-      .collection-head{display:block} .collection-head p{margin-top:18px}
-      .grid{grid-template-columns:1fr} .card{min-height:560px}
+      .collection-head{display:block}.collection-head p{margin-top:18px}
+      .grid{grid-template-columns:1fr}.card{min-height:560px}
       .foot{align-items:flex-start;flex-direction:column}
     }
     @media (max-width:620px){.signature-grid{grid-template-columns:1fr}.signature{min-height:270px}}
     @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-  
+
     /* ARCANEUM mobile and image refinements */
     body{overflow-x:hidden}
     header{background:rgba(7,7,6,.96)}
@@ -133,7 +133,6 @@
       .btn{width:100%}
       .card h3{font-size:2.15rem}
     }
-
 
     /* Mobile polish — controlled title, compact navigation, cleaner rhythm */
     .hero-title span{display:block;white-space:nowrap}
@@ -198,6 +197,7 @@
     .form-actions{position:relative;display:flex;align-items:center;gap:18px;margin-top:4px}
     .form-submit{flex:0 0 auto;border:1px solid var(--gold);cursor:pointer;font-family:Manrope,Arial,sans-serif}
     .form-submit span{margin-left:12px;font-size:1rem;line-height:1}
+    .form-submit:disabled{opacity:.62;cursor:wait;transform:none;box-shadow:none}
     .form-note{max-width:250px;color:#8f8779;font-size:.72rem;line-height:1.55}
     .form-status{position:relative;margin-top:18px;padding:13px 15px;border-left:2px solid var(--gold);background:rgba(198,168,92,.08);color:#ded5c5;font-size:.82rem;line-height:1.55}
     .form-status[hidden]{display:none}
@@ -216,7 +216,6 @@
       .form-submit{width:100%}
       .form-note{max-width:none;text-align:center}
     }
-
 </style>
 </head>
 <body>
@@ -250,14 +249,14 @@
 <a class="signature" href="fragrances/rex-noctis/" aria-label="Explore Rex Noctis — Control">
 <div class="signature-role">Control</div><h3>REX NOCTIS</h3><div class="signature-line">Silence wears the crown.</div><p class="signature-arc">Cold authority becomes warm attraction.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
-<a class="signature" href="?fragrance=Vesper%20Glass#private-preview-form" aria-label="Request a private preview for Vesper Glass — Transformation">
-<div class="signature-role">Transformation</div><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Request a preview <span aria-hidden="true">→</span></div>
+<a class="signature" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
+<div class="signature-role">Transformation</div><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
 <a class="signature" href="fragrances/wild-sovereign/" aria-label="Explore Wild Sovereign — Instinct">
 <div class="signature-role">Instinct</div><h3>WILD SOVEREIGN</h3><div class="signature-line">Refinement, undomesticated.</div><p class="signature-arc">Botanical light → apricot suede → warm skin → smoke.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
-<a class="signature" href="?fragrance=VermillionAire#private-preview-form" aria-label="Request a private preview for VermillionAire — Radiance">
-<div class="signature-role">Radiance</div><h3>VERMILLIONAIRE</h3><div class="signature-line">Sunlight, cut with salt.</div><p class="signature-arc">Vermilion peel → salt-lit air → sun-warmed skin.</p><div class="signature-link">Request a preview <span aria-hidden="true">→</span></div>
+<a class="signature" href="fragrances/vermillionaire/" aria-label="Explore VermillionAire — Radiance">
+<div class="signature-role">Radiance</div><h3>VERMILLIONAIRE</h3><div class="signature-line">Sunlight, cut with salt.</div><p class="signature-arc">Vermilion peel → salt-lit air → sun-warmed skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
 </a>
 </div>
 </div>
@@ -302,7 +301,7 @@
 <p class="preview-lede">Request private sampling, receive launch news, or begin a conversation with the house. Tell us which world you want to experience first.</p>
 <p class="preview-direct">Prefer to write directly? <a class="email-link" href="mailto:arcaneumperfumes@gmail.com?subject=ARCANEUM%20Private%20Preview">arcaneumperfumes@gmail.com</a></p>
 </div>
-<form class="preview-form" id="private-preview-form" aria-labelledby="preview-title" action="mailto:arcaneumperfumes@gmail.com?subject=ARCANEUM%20Private%20Preview" method="post" enctype="text/plain">
+<form class="preview-form" id="private-preview-form" aria-labelledby="preview-title" method="post">
 <div class="form-intro">
 <div class="form-kicker">Your invitation begins here.</div>
 <p>A few details let us make the conversation more personal.</p>
@@ -343,9 +342,10 @@
 <label class="form-field">Your note
 <textarea name="message" maxlength="600" rows="4" placeholder="What would you like to experience?"></textarea>
 </label>
+<input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0"/>
 <div class="form-actions">
-<button class="btn primary form-submit" type="submit" aria-describedby="form-note">Prepare my request <span aria-hidden="true">→</span></button>
-<span class="form-note" id="form-note">Your email app will open with the request prepared. Send it to complete your inquiry.</span>
+<button class="btn primary form-submit" type="submit" aria-describedby="form-note">Send my request <span aria-hidden="true">→</span></button>
+<span class="form-note" id="form-note">Sent directly to ARCANEUM. No email app required.</span>
 </div>
 <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
 </form>
@@ -361,42 +361,82 @@
     update();
     addEventListener('scroll', update, {passive:true});
 
+    const SUPABASE_URL = 'https://xfefiwmzzvuacnxfoyrq.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_DbNhTV5AwiAWvZqDsGILGw_3swtoHsQ';
     const form = document.querySelector('#private-preview-form');
     const status = document.querySelector('#form-status');
     const requestedFragrance = new URLSearchParams(window.location.search).get('fragrance');
     const fragranceSelect = form?.elements.namedItem('fragrance');
-    if (requestedFragrance && fragranceSelect instanceof HTMLSelectElement) {
-      const hasOption = [...fragranceSelect.options].some((option) => option.text === requestedFragrance);
-      if (hasOption) fragranceSelect.value = requestedFragrance;
-    }
-    form?.addEventListener('submit', (event) => {
+    const applyRequestedFragrance = () => {
+      if (requestedFragrance && fragranceSelect instanceof HTMLSelectElement) {
+        const hasOption = [...fragranceSelect.options].some((option) => option.text === requestedFragrance);
+        if (hasOption) fragranceSelect.value = requestedFragrance;
+      }
+    };
+    applyRequestedFragrance();
+
+    form?.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
 
       const data = new FormData(form);
+      const honeypot = String(data.get('website') || '').trim();
+      if (honeypot) {
+        status.hidden = false;
+        status.textContent = 'Request received. Thank you.';
+        form.reset();
+        applyRequestedFragrance();
+        return;
+      }
+
       const name = String(data.get('name') || '').trim();
       const email = String(data.get('email') || '').trim();
-      const interest = String(data.get('interest') || 'Private Preview').trim();
-      const fragrance = String(data.get('fragrance') || 'The collection / undecided').trim();
+      const interest = String(data.get('interest') || '').trim();
+      const fragrance = String(data.get('fragrance') || '').trim();
       const message = String(data.get('message') || '').trim();
-      const subject = `ARCANEUM ${interest} — ${name}`;
-      const body = [
-        'ARCANEUM PRIVATE PREVIEW REQUEST',
-        '',
-        `Name: ${name}`,
-        `Email: ${email}`,
-        `Interest: ${interest}`,
-        `Fragrance: ${fragrance}`,
-        '',
-        'Message:',
-        message || 'I would like to learn more about the ARCANEUM private preview.',
-        '',
-        'Prepared at arcaneumperfumes.com'
-      ].join('\n');
+      const button = form.querySelector('.form-submit');
+      const originalButton = button?.innerHTML;
 
+      if (button instanceof HTMLButtonElement) {
+        button.disabled = true;
+        button.textContent = 'Sending…';
+      }
       status.hidden = false;
-      status.textContent = 'Your email app is opening. Send the prepared message to complete your request.';
-      window.location.href = `mailto:arcaneumperfumes@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      status.textContent = 'Sending your request…';
+
+      try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/private_preview_requests`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': SUPABASE_PUBLISHABLE_KEY,
+            'Authorization': `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+            'Prefer': 'return=minimal'
+          },
+          body: JSON.stringify({
+            full_name: name,
+            email,
+            interest,
+            fragrance: fragrance || null,
+            message: message || null,
+            source_page: window.location.href.slice(0, 200)
+          })
+        });
+
+        if (!response.ok) throw new Error(`Private preview request failed: ${response.status}`);
+
+        status.textContent = 'Request received. ARCANEUM has your details—no email app required.';
+        form.reset();
+        applyRequestedFragrance();
+      } catch (error) {
+        console.error('ARCANEUM private preview submission failed.', error);
+        status.textContent = 'We could not send the request directly. Please use the email link beside the form.';
+      } finally {
+        if (button instanceof HTMLButtonElement) {
+          button.disabled = false;
+          if (originalButton) button.innerHTML = originalButton;
+        }
+      }
     });
   })();
 </script>
