@@ -1,55 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
   <title id="title">Vesper Glass signature artwork</title>
-  <desc id="desc">Cold architectural glass and silver light gradually warming toward skin.</desc>
+  <desc id="desc">Smoked architectural glass, silver mineral light, pale iris haze, and a restrained warmth emerging near skin.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#050607"/>
-      <stop offset="0.5" stop-color="#232a31"/>
-      <stop offset="0.76" stop-color="#737b82"/>
-      <stop offset="1" stop-color="#111315"/>
+      <stop offset="0.45" stop-color="#11161b"/>
+      <stop offset="0.72" stop-color="#252c31"/>
+      <stop offset="1" stop-color="#090a0b"/>
     </linearGradient>
-    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#eef4f7" stop-opacity="0.46"/>
-      <stop offset="0.34" stop-color="#b5c0c8" stop-opacity="0.09"/>
-      <stop offset="0.62" stop-color="#6e777f" stop-opacity="0.27"/>
-      <stop offset="1" stop-color="#f5eee4" stop-opacity="0.16"/>
+    <linearGradient id="paneA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#edf4f7" stop-opacity="0.24"/>
+      <stop offset="0.34" stop-color="#aab8c0" stop-opacity="0.06"/>
+      <stop offset="0.68" stop-color="#d8e0e4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#5e6870" stop-opacity="0.03"/>
     </linearGradient>
-    <radialGradient id="warm" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#d9a980" stop-opacity="0.6"/>
-      <stop offset="0.46" stop-color="#aa7458" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#5a3728" stop-opacity="0"/>
+    <linearGradient id="paneB" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#e8eef1" stop-opacity="0.04"/>
+      <stop offset="0.48" stop-color="#c3cdd3" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+    <radialGradient id="silver" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#dbe4e9" stop-opacity="0.42"/>
+      <stop offset="0.45" stop-color="#aebbc3" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#73818a" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="iris" cx="50%" cy="50%" r="50%">
-      <stop offset="0" stop-color="#d9d6dd" stop-opacity="0.58"/>
-      <stop offset="1" stop-color="#8d8792" stop-opacity="0"/>
+      <stop offset="0" stop-color="#c9c2cf" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8f8796" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="32"/></filter>
-    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="11" result="noise"/>
+    <radialGradient id="skin" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#c58d6e" stop-opacity="0.33"/>
+      <stop offset="0.52" stop-color="#845b48" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#51372d" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur24"><feGaussianBlur stdDeviation="24"/></filter>
+    <filter id="blur54"><feGaussianBlur stdDeviation="54"/></filter>
+    <filter id="grain" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="3" seed="37" result="noise"/>
       <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
-      <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 0.07"/></feComponentTransfer>
+      <feComponentTransfer in="mono"><feFuncA type="table" tableValues="0 0.055"/></feComponentTransfer>
     </filter>
   </defs>
   <rect width="1200" height="1500" fill="url(#bg)"/>
-  <ellipse cx="600" cy="1240" rx="470" ry="310" fill="url(#warm)" filter="url(#blur)"/>
-  <ellipse cx="770" cy="490" rx="280" ry="250" fill="url(#iris)" filter="url(#blur)"/>
-  <g transform="rotate(-8 600 720)">
-    <rect x="330" y="180" width="540" height="1010" rx="76" fill="#080b0e" fill-opacity="0.28" stroke="#d9e0e5" stroke-opacity="0.38" stroke-width="3"/>
-    <rect x="370" y="220" width="460" height="930" rx="58" fill="url(#glass)" stroke="#f4f8fa" stroke-opacity="0.13" stroke-width="2"/>
-    <path d="M398 1110L738 250" stroke="#f5f8fa" stroke-opacity="0.3" stroke-width="15"/>
-    <path d="M470 1145L805 310" stroke="#cbd3da" stroke-opacity="0.1" stroke-width="52"/>
-    <path d="M395 750L830 590" stroke="#f1f4f6" stroke-opacity="0.12" stroke-width="4"/>
+  <ellipse cx="855" cy="410" rx="420" ry="350" fill="url(#silver)" filter="url(#blur54)"/>
+  <ellipse cx="450" cy="735" rx="330" ry="290" fill="url(#iris)" filter="url(#blur54)"/>
+  <ellipse cx="805" cy="1280" rx="470" ry="250" fill="url(#skin)" filter="url(#blur54)"/>
+  <g opacity="0.98">
+    <polygon points="205,105 735,65 1015,1015 500,1125" fill="url(#paneA)" stroke="#d9e2e7" stroke-opacity="0.18" stroke-width="2"/>
+    <polygon points="505,85 1008,220 835,1215 345,1040" fill="url(#paneB)" stroke="#f4f7f8" stroke-opacity="0.1" stroke-width="2"/>
+    <polygon points="742,115 1115,350 905,1270 630,1045" fill="#cad4da" fill-opacity="0.035" stroke="#dbe3e7" stroke-opacity="0.11" stroke-width="2"/>
   </g>
-  <g fill="#eef2f4" fill-opacity="0.3">
-    <circle cx="445" cy="375" r="9"/><circle cx="495" cy="450" r="5"/><circle cx="735" cy="370" r="7"/>
-    <circle cx="780" cy="515" r="4"/><circle cx="505" cy="620" r="8"/><circle cx="705" cy="700" r="6"/>
-    <circle cx="425" cy="820" r="5"/><circle cx="765" cy="905" r="8"/><circle cx="585" cy="1030" r="6"/>
+  <path d="M265 150L616 1070" stroke="#f1f5f7" stroke-opacity="0.2" stroke-width="7"/>
+  <path d="M520 112L885 1045" stroke="#d9e2e7" stroke-opacity="0.09" stroke-width="28"/>
+  <path d="M880 210L728 1055" stroke="#eef3f5" stroke-opacity="0.11" stroke-width="4"/>
+  <g fill="#e9eef0" fill-opacity="0.2">
+    <circle cx="320" cy="345" r="8"/><circle cx="398" cy="516" r="5"/><circle cx="557" cy="270" r="4"/>
+    <circle cx="708" cy="450" r="7"/><circle cx="844" cy="620" r="5"/><circle cx="633" cy="790" r="6"/>
+    <circle cx="860" cy="905" r="4"/><circle cx="470" cy="960" r="5"/>
   </g>
-  <g transform="translate(760 620)" fill="none" stroke="#dad4df" stroke-opacity="0.3" stroke-width="7">
-    <ellipse rx="42" ry="116" transform="rotate(0)"/>
-    <ellipse rx="42" ry="116" transform="rotate(60)"/>
-    <ellipse rx="42" ry="116" transform="rotate(120)"/>
+  <g filter="url(#blur24)" opacity="0.28">
+    <path d="M225 690C356 612 447 600 573 663C472 710 390 789 310 905C255 836 224 765 225 690Z" fill="#b7aebd"/>
+    <path d="M764 1096C888 1038 1005 1051 1128 1140C1015 1211 899 1242 747 1216C739 1170 744 1130 764 1096Z" fill="#9a6a55"/>
   </g>
-  <rect width="1200" height="1500" filter="url(#grain)" opacity="0.6"/>
-  <path d="M0 1280C220 1190 395 1245 555 1340C735 1446 930 1452 1200 1320V1500H0Z" fill="#7f5a46" fill-opacity="0.12"/>
+  <rect width="1200" height="1500" filter="url(#grain)" opacity="0.78"/>
 </svg>
