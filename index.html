@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#070706" name="theme-color"/>
-<meta content="ARCANEUM Perfumes — independent fine fragrance expressed through distinctive olfactory worlds, exceptional materials, molecular precision, and disciplined sensory design." name="description"/>
+<meta content="ARCANEUM Perfumes — independent fine fragrance built around transformation, tension, and distinctive olfactory worlds." name="description"/>
 <title>ARCANEUM Perfumes — Independent Fine Fragrance</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,6 +61,22 @@
     .card:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
     .badge{position:absolute;z-index:4;top:22px;right:22px;border:1px solid rgba(241,219,146,.48);padding:8px 11px;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;background:rgba(5,5,4,.48);backdrop-filter:blur(8px)}
     .art-svg{width:100%;height:100%;object-fit:cover;object-position:center}
+
+    /* House signatures — four distinct emotional doors into ARCANEUM */
+    .signatures{padding-top:18px}
+    .signature-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:end;margin-bottom:38px}
+    .signature-head p{max-width:650px;margin:0}
+    .signature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+    .signature{min-height:310px;padding:28px 24px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;position:relative;background:linear-gradient(155deg,rgba(19,16,11,.72),rgba(8,8,7,.98));transition:background .25s,transform .25s}
+    .signature:hover,.signature:focus-visible{background:linear-gradient(155deg,rgba(30,24,14,.9),rgba(9,8,7,.98));transform:translateY(-2px)}
+    .signature:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+    .signature-role{letter-spacing:.2em;text-transform:uppercase;font-size:.64rem;color:var(--gold2);margin-bottom:32px}
+    .signature h3{font-size:clamp(1.9rem,2.9vw,2.8rem);line-height:.94}
+    .signature-line{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.18rem;line-height:1.35;color:#ded4c1;margin:14px 0 12px}
+    .signature-arc{margin:0;color:#aaa292;font-size:.82rem;line-height:1.65}
+    .signature-link{margin-top:auto;padding-top:28px;color:var(--ivory);font-size:.64rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase}
+    .signature-link span{color:var(--gold2);margin-left:6px}
+
     .manifesto{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(120deg,#0a0907,#151109 55%,#080807)}
     .manifesto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
     .pillars{display:grid;gap:20px}
@@ -72,14 +88,16 @@
     footer{border-top:1px solid var(--line);padding:32px 0 46px;color:#918979;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
     .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
     .foot img{width:58px}
+    @media (max-width:1020px){.signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media (max-width:800px){
       nav{height:70px} .navlinks{display:none} .mark span{display:none}
       .hero{padding-top:110px} section{padding:82px 0}
-      .intro,.manifesto-grid{grid-template-columns:1fr;gap:35px}
+      .intro,.manifesto-grid,.signature-head{grid-template-columns:1fr;gap:35px}
       .collection-head{display:block} .collection-head p{margin-top:18px}
       .grid{grid-template-columns:1fr} .card{min-height:560px}
       .foot{align-items:flex-start;flex-direction:column}
     }
+    @media (max-width:620px){.signature-grid{grid-template-columns:1fr}.signature{min-height:270px}}
     @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   
     /* ARCANEUM mobile and image refinements */
@@ -214,28 +232,49 @@
 <img alt="ARCANEUM Perfumes original gold crest logo" class="hero-logo" src="assets/wordmark.webp"/>
 <div class="eyebrow">Independent Fine Fragrance</div>
 <h1 class="hero-title"><span>SCENT</span><span>WITH</span><span class="gold">SOVEREIGNTY.</span></h1>
-<p class="hero-copy">ARCANEUM creates fragrances as complete worlds—built through rare naturals, modern molecular architecture, disciplined sensory evaluation, and one unforgettable central tension.</p>
-<div class="actions"><a class="btn primary" href="#collection">Enter the Collection</a><a class="btn" href="#private-preview-form">Request a Private Preview</a></div>
+<p class="hero-copy">Fragrance built around transformation. Cold becomes skin. Light becomes warmth. Refinement gives way to instinct. Every ARCANEUM fragrance begins with one unforgettable tension—and follows it until the air remembers what changed.</p>
+<div class="actions"><a class="btn primary" href="#collection">Explore the Collection</a><a class="btn" href="#private-preview-form">Request a Private Preview</a></div>
 </div>
 </section>
 <section id="house">
 <div class="shell intro">
 <div><div class="eyebrow">The House</div><h2>Artistry shaped by <span class="gold">chemistry.</span></h2></div>
-<p>Every ARCANEUM composition begins with an emotional collision. Exceptional natural materials provide soul, texture, and identity; precise synthetics control diffusion, stability, longevity, and form. The result is not decoration. It is atmosphere with structure.</p>
+<p>Every ARCANEUM composition begins with an emotional collision: distance against intimacy, polish against instinct, light against heat. The opening is not simply a list of top notes and the drydown is not where the heavy materials remain. The perfume is architecture in motion—built to change while you wear it.</p>
 </div>
 </section>
+
+<section class="signatures" id="signatures">
+<div class="shell">
+<div class="signature-head"><div><div class="eyebrow">House Signatures</div><h2>Four forms of <span class="gold">presence.</span></h2></div><p>ARCANEUM is not one mood repeated in different bottles. These four worlds show the house at its clearest: control, transformation, instinct, and radiance.</p></div>
+<div class="signature-grid">
+<a class="signature" href="fragrances/rex-noctis/" aria-label="Explore Rex Noctis — Control">
+<div class="signature-role">Control</div><h3>REX NOCTIS</h3><div class="signature-line">Silence wears the crown.</div><p class="signature-arc">Cold authority becomes warm attraction.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
+</a>
+<a class="signature" href="?fragrance=Vesper%20Glass#private-preview-form" aria-label="Request a private preview for Vesper Glass — Transformation">
+<div class="signature-role">Transformation</div><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Request a preview <span aria-hidden="true">→</span></div>
+</a>
+<a class="signature" href="fragrances/wild-sovereign/" aria-label="Explore Wild Sovereign — Instinct">
+<div class="signature-role">Instinct</div><h3>WILD SOVEREIGN</h3><div class="signature-line">Refinement, undomesticated.</div><p class="signature-arc">Botanical light → apricot suede → warm skin → smoke.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div>
+</a>
+<a class="signature" href="?fragrance=VermillionAire#private-preview-form" aria-label="Request a private preview for VermillionAire — Radiance">
+<div class="signature-role">Radiance</div><h3>VERMILLIONAIRE</h3><div class="signature-line">Sunlight, cut with salt.</div><p class="signature-arc">Vermilion peel → salt-lit air → sun-warmed skin.</p><div class="signature-link">Request a preview <span aria-hidden="true">→</span></div>
+</a>
+</div>
+</div>
+</section>
+
 <section id="collection">
 <div class="shell">
-<div class="collection-head"><div><div class="eyebrow">Olfactory Worlds</div><h2>The Collection</h2></div><p>Each fragrance is shown through its aroma, temperature, texture, emotional territory, and social presence. Enter a world to discover its complete story.</p></div>
+<div class="collection-head"><div><div class="eyebrow">Olfactory Worlds</div><h2>The Collection</h2></div><p>Choose by experience, not by a note list alone. Each world has its own temperature, texture, emotional territory, and social presence.</p></div>
 <div class="grid">
 <a aria-label="Enter the Rex Noctis story" class="card" href="fragrances/rex-noctis/">
-<div class="badge">In Development</div><div class="card-art"><img alt="Black leather, narcissus, cold mineral amber, shadowed woods and smoke" class="art-svg" decoding="async" loading="lazy" src="assets/rex-noctis.webp"/></div><div class="card-copy"><div class="eyebrow">Cold authority / animalic darkness</div><h3>REX NOCTIS</h3><div class="tension">A throne cut from shadow.</div><div class="notes">Mineral amber · leather · narcissus · oud · musk · smoke</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
+<div class="badge">In Development</div><div class="card-art"><img alt="Black leather, narcissus, cold mineral amber, shadowed woods and smoke" class="art-svg" decoding="async" loading="lazy" src="assets/rex-noctis.webp"/></div><div class="card-copy"><div class="eyebrow">Control / nocturnal authority</div><h3>REX NOCTIS</h3><div class="tension">Silence wears the crown.</div><div class="notes">Bitter citrus · leather · oud · iris · ambergris · musk</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 <a aria-label="Enter the Crimson Grove story" class="card" href="fragrances/crimson-grove/">
 <div class="badge">Coming Soon</div><div class="card-art"><img alt="Dark cherries and plums glowing in an ancient evergreen forest" class="art-svg" decoding="async" loading="lazy" src="assets/crimson-grove.webp"/></div><div class="card-copy"><div class="eyebrow">Dark orchard / cold conifer woods</div><h3>CRIMSON GROVE</h3><div class="tension">Fruit burning red beneath ancient trees.</div><div class="notes">Black cherry · plum · dark rose · evergreen · cold woods · amber</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 <a aria-label="Enter the Wild Sovereign story" class="card" href="fragrances/wild-sovereign/">
-<div class="badge">In Development</div><div class="card-art"><img alt="Cedrat citrus, green pepper, wild botanicals, suede and incense smoke" class="art-svg" decoding="async" loading="lazy" src="assets/wild-sovereign.webp"/></div><div class="card-copy"><div class="eyebrow">Radiant botanical life / smoldering darkness</div><h3>WILD SOVEREIGN</h3><div class="tension">The forest alive, then set alight.</div><div class="notes">Cedrat · green pepper · magnolia · osmanthus suede · incense · warm skin</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
+<div class="badge">In Development</div><div class="card-art"><img alt="Cedrat citrus, green pepper, wild botanicals, suede and incense smoke" class="art-svg" decoding="async" loading="lazy" src="assets/wild-sovereign.webp"/></div><div class="card-copy"><div class="eyebrow">Instinct / botanical radiance</div><h3>WILD SOVEREIGN</h3><div class="tension">Refinement, undomesticated.</div><div class="notes">Cedrat · green spice · osmanthus suede · warm skin · tobacco · incense</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 <a aria-label="Enter the Sovereign Tide story" class="card" href="fragrances/sovereign-tide/">
 <div class="badge">In Development</div><div class="card-art"><img alt="Marine algae, wet earth, mushroom, driftwood, resin and storm-dark water" class="art-svg" decoding="async" loading="lazy" src="assets/sovereign-tide.webp"/></div><div class="card-copy"><div class="eyebrow">Polished natural luxury / strange marine earth</div><h3>SOVEREIGN TIDE</h3><div class="tension">The sea meets the living floor of the forest.</div><div class="notes">Marine algae · wet earth · mushroom · driftwood · sandalwood · resin</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
@@ -251,8 +290,8 @@
 </section>
 <section class="manifesto">
 <div class="shell manifesto-grid">
-<div><div class="eyebrow">ARCANEUM Method</div><h2>Natural soul.<br/><span class="gold">Molecular command.</span></h2><p>We lead with exceptional naturals wherever they add real beauty, complexity, texture, or identity—then use synthetics to control diffusion, stability, longevity, and precision.</p></div>
-<div class="pillars"><div class="pillar"><strong>One Memorable Collision</strong><p>Every fragrance is reduced to one central tension that survives from opening through drydown.</p></div><div class="pillar"><strong>Controlled Sensory Validation</strong><p>Chemistry generates hypotheses. Smelling, measured trials, and ruthless editing decide the truth.</p></div><div class="pillar"><strong>Documented Integrity</strong><p>Materials, supplied forms, active concentrations, stability, safety, and formula versions remain traceable.</p></div></div>
+<div><div class="eyebrow">ARCANEUM Method</div><h2>Natural soul.<br/><span class="gold">Molecular command.</span></h2><p>We use naturals, modern aroma materials, and classical perfumery structures according to what the composition actually needs. Prestige does not earn a material its place. Necessity does.</p></div>
+<div class="pillars"><div class="pillar"><strong>One Memorable Collision</strong><p>Every fragrance begins with one central tension strong enough to survive from first contact through drydown.</p></div><div class="pillar"><strong>Controlled Sensory Validation</strong><p>Chemistry generates hypotheses. Smelling, measured trials, and ruthless editing decide the truth.</p></div><div class="pillar"><strong>The Perfume Earns the Story</strong><p>Prediction guides development. Observation earns the claim. We understand what the perfume does, then tell that truth beautifully.</p></div></div>
 </div>
 </section>
 <section class="contact" id="contact">
@@ -260,7 +299,7 @@
 <div class="preview-copy">
 <div class="eyebrow">Private Preview</div>
 <h2 id="preview-title">Enter the house before<br/> <span class="gold">the doors open.</span></h2>
-<p class="preview-lede">Request private sampling, receive launch news, or begin a conversation with the house. Tell us what draws you into the world of ARCANEUM.</p>
+<p class="preview-lede">Request private sampling, receive launch news, or begin a conversation with the house. Tell us which world you want to experience first.</p>
 <p class="preview-direct">Prefer to write directly? <a class="email-link" href="mailto:arcaneumperfumes@gmail.com?subject=ARCANEUM%20Private%20Preview">arcaneumperfumes@gmail.com</a></p>
 </div>
 <form class="preview-form" id="private-preview-form" aria-labelledby="preview-title" action="mailto:arcaneumperfumes@gmail.com?subject=ARCANEUM%20Private%20Preview" method="post" enctype="text/plain">
@@ -291,8 +330,10 @@
 <select name="fragrance">
 <option value="">The collection / undecided</option>
 <option>Rex Noctis</option>
-<option>Crimson Grove</option>
+<option>Vesper Glass</option>
 <option>Wild Sovereign</option>
+<option>VermillionAire</option>
+<option>Crimson Grove</option>
 <option>Sovereign Tide</option>
 <option>Velvet Pulse</option>
 <option>Summer Nova</option>
