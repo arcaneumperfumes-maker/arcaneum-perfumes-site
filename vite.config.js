@@ -10,8 +10,10 @@ export default defineConfig({
       input: {
         home: resolve(root, "index.html"),
         rexNoctis: resolve(root, "fragrances/rex-noctis/index.html"),
-        crimsonGrove: resolve(root, "fragrances/crimson-grove/index.html"),
+        vesperGlass: resolve(root, "fragrances/vesper-glass/index.html"),
         wildSovereign: resolve(root, "fragrances/wild-sovereign/index.html"),
+        vermillionAire: resolve(root, "fragrances/vermillionaire/index.html"),
+        crimsonGrove: resolve(root, "fragrances/crimson-grove/index.html"),
         sovereignTide: resolve(root, "fragrances/sovereign-tide/index.html"),
         velvetPulse: resolve(root, "fragrances/velvet-pulse/index.html"),
         summerNova: resolve(root, "fragrances/summer-nova/index.html"),
