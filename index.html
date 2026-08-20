@@ -226,13 +226,20 @@
     .form-field{position:relative;display:grid;gap:9px;margin-bottom:19px;color:#d8d0c1;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
     .form-label{display:inline-flex;align-items:baseline;gap:4px}
     .required{color:var(--gold2)}
-    .form-field input,.form-field select,.form-field textarea{width:100%;min-height:51px;border:1px solid rgba(198,168,92,.28);border-radius:0;outline:0;background:rgba(3,3,3,.38);color:var(--ivory);font:400 .92rem/1.45 Manrope,Arial,sans-serif;letter-spacing:0;text-transform:none;transition:border-color .2s,box-shadow .2s,background .2s}
-    .form-field input,.form-field select{padding:0 15px}
+    .form-field input,.form-field textarea{width:100%;min-height:51px;border:1px solid rgba(198,168,92,.28);border-radius:0;outline:0;background:rgba(3,3,3,.38);color:var(--ivory);font:400 .92rem/1.45 Manrope,Arial,sans-serif;letter-spacing:0;text-transform:none;transition:border-color .2s,box-shadow .2s,background .2s}
+    .form-field input{padding:0 15px}
     .form-field textarea{min-height:116px;padding:14px 15px;resize:vertical}
-    .form-field select{cursor:pointer;color-scheme:dark}
-    .form-field option{background:#11100e;color:var(--ivory)}
     .form-field input::placeholder,.form-field textarea::placeholder{color:#777064}
-    .form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--gold2);background:rgba(7,7,6,.72);box-shadow:0 0 0 3px rgba(198,168,92,.09)}
+    .form-field input:focus,.form-field textarea:focus{border-color:var(--gold2);background:rgba(7,7,6,.72);box-shadow:0 0 0 3px rgba(198,168,92,.09)}
+    .choice-field{position:relative;margin:0 0 19px;padding:0;border:0;min-width:0}
+    .choice-field legend{width:100%;margin:0 0 9px;padding:0;color:#d8d0c1;font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+    .choice-grid{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .choice-option{display:flex;min-width:0;min-height:46px;align-items:center;gap:10px;padding:10px 12px;border:1px solid rgba(198,168,92,.24);background:rgba(3,3,3,.34);color:#cfc7b9;font-size:.76rem;font-weight:400;line-height:1.35;letter-spacing:0;text-transform:none;cursor:pointer;transition:border-color .2s,background .2s,color .2s,box-shadow .2s}
+    .choice-option:hover{border-color:rgba(241,219,146,.48);background:rgba(198,168,92,.06);color:var(--ivory)}
+    .choice-option:focus-within{border-color:var(--gold2);box-shadow:0 0 0 3px rgba(198,168,92,.09)}
+    .choice-option:has(input:checked){border-color:rgba(241,219,146,.72);background:linear-gradient(135deg,rgba(198,168,92,.16),rgba(198,168,92,.05));color:var(--ivory)}
+    .choice-option input{flex:0 0 auto;width:17px;height:17px;margin:0;accent-color:var(--gold);cursor:pointer}
+    .choice-option span{min-width:0}
     .form-actions{position:relative;display:flex;align-items:center;gap:18px;margin-top:4px}
     .form-submit{flex:0 0 auto;border:1px solid var(--gold);cursor:pointer;font-family:Manrope,Arial,sans-serif}
     .form-submit span{margin-left:12px;font-size:1rem;line-height:1}
@@ -251,10 +258,13 @@
       .preview-copy h2 br{display:none}
       .preview-form{padding:28px 22px}
       .form-row{grid-template-columns:1fr;gap:0}
+      .choice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .choice-option{min-height:48px;padding:10px;font-size:.74rem}
       .form-actions{align-items:stretch;flex-direction:column}
       .form-submit{width:100%}
       .form-note{max-width:none;text-align:center}
     }
+    @media (max-width:380px){.choice-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -349,31 +359,30 @@
 <input name="email" type="email" inputmode="email" autocomplete="email" maxlength="120" placeholder="you@example.com" required/>
 </label>
 </div>
-<div class="form-row">
-<label class="form-field"><span class="form-label">I’m interested in <span class="required" aria-hidden="true">*</span></span>
-<select name="interest" required>
-<option value="" selected disabled>Choose an interest</option>
-<option>Private sampling</option>
-<option>Launch updates</option>
-<option>Retail interest</option>
-<option>Creative collaboration</option>
-<option>Press or editorial</option>
-</select>
-</label>
-<label class="form-field">Fragrance
-<select name="fragrance">
-<option value="">The collection / undecided</option>
-<option>Rex Noctis</option>
-<option>Wild Sovereign</option>
-<option>Vesper Glass</option>
-<option>VERMILLIONAIRE</option>
-<option>Crimson Grove</option>
-<option>Sovereign Tide</option>
-<option>Velvet Pulse</option>
-<option>Summer Nova</option>
-</select>
-</label>
+<fieldset class="choice-field">
+<legend>I’m interested in <span class="required" aria-hidden="true">*</span></legend>
+<div class="choice-grid">
+<label class="choice-option"><input type="radio" name="interest" value="Private sampling" required/><span>Private sampling</span></label>
+<label class="choice-option"><input type="radio" name="interest" value="Launch updates"/><span>Launch updates</span></label>
+<label class="choice-option"><input type="radio" name="interest" value="Retail interest"/><span>Retail interest</span></label>
+<label class="choice-option"><input type="radio" name="interest" value="Creative collaboration"/><span>Creative collaboration</span></label>
+<label class="choice-option"><input type="radio" name="interest" value="Press or editorial"/><span>Press or editorial</span></label>
 </div>
+</fieldset>
+<fieldset class="choice-field">
+<legend>Fragrance</legend>
+<div class="choice-grid">
+<label class="choice-option"><input type="radio" name="fragrance" value="" checked/><span>The collection / undecided</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Rex Noctis"/><span>Rex Noctis</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Wild Sovereign"/><span>Wild Sovereign</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Vesper Glass"/><span>Vesper Glass</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="VERMILLIONAIRE"/><span>VERMILLIONAIRE</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Crimson Grove"/><span>Crimson Grove</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Sovereign Tide"/><span>Sovereign Tide</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Velvet Pulse"/><span>Velvet Pulse</span></label>
+<label class="choice-option"><input type="radio" name="fragrance" value="Summer Nova"/><span>Summer Nova</span></label>
+</div>
+</fieldset>
 <label class="form-field">Your note
 <textarea name="message" maxlength="600" rows="4" placeholder="What would you like to experience?"></textarea>
 </label>
@@ -401,12 +410,11 @@
     const form = document.querySelector('#private-preview-form');
     const status = document.querySelector('#form-status');
     const requestedFragrance = new URLSearchParams(window.location.search).get('fragrance');
-    const fragranceSelect = form?.elements.namedItem('fragrance');
+    const fragranceRadios = form ? [...form.querySelectorAll('input[name="fragrance"]')] : [];
     const applyRequestedFragrance = () => {
-      if (requestedFragrance && fragranceSelect instanceof HTMLSelectElement) {
-        const hasOption = [...fragranceSelect.options].some((option) => option.text === requestedFragrance);
-        if (hasOption) fragranceSelect.value = requestedFragrance;
-      }
+      if (!requestedFragrance) return;
+      const match = fragranceRadios.find((radio) => radio.value === requestedFragrance);
+      if (match) match.checked = true;
     };
     applyRequestedFragrance();
 
