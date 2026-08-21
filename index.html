@@ -70,9 +70,10 @@
     .collection-head{display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:42px}
     .collection-head p{max-width:460px;margin:0}
     .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .card{position:relative;display:block;min-height:620px;overflow:hidden;border:1px solid var(--line);background:#0d0c0a;isolation:isolate}
+    .card{position:relative;display:block;min-height:620px;overflow:hidden;border:1px solid rgba(198,168,92,.2);background:#0d0c0a;isolation:isolate;box-shadow:0 18px 48px rgba(0,0,0,.2);transition:transform .35s,border-color .35s,box-shadow .35s}
     .card-art{position:absolute;inset:0;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .6s}
-    .card:hover .card-art{transform:scale(1.035);filter:saturate(1.12)}
+    .card:hover,.card:focus-visible{transform:translateY(-3px);border-color:rgba(241,219,146,.38);box-shadow:0 24px 58px rgba(0,0,0,.3)}
+    .card:hover .card-art,.card:focus-visible .card-art{transform:scale(1.035);filter:saturate(1.12)}
     .card:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(3,3,3,.96),rgba(3,3,3,.05) 68%);z-index:2}
     .card-copy{position:absolute;z-index:3;inset:auto 28px 28px}
     .card h3{font-size:clamp(2.1rem,4vw,3.5rem)}
@@ -113,11 +114,6 @@
     .signature-link{display:inline-flex;align-items:center;gap:8px;margin-top:15px;padding-bottom:3px;border-bottom:1px solid rgba(241,219,146,.34);color:var(--ivory);font-size:.59rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;transition:gap .25s,color .25s}
     .signature:hover .signature-link,.signature:focus-visible .signature-link{gap:12px;color:var(--gold2)}
     .signature-link span{color:var(--gold2)}
-    .signature-approved{border:0;box-shadow:none;background:#070706}
-    .signature-approved:before,.signature-approved:after{display:none}
-    .signature-approved:hover,.signature-approved:focus-visible{border-color:transparent;box-shadow:none}
-    .signature-approved .signature-art img{object-position:center}
-    .signature-approved:hover .signature-art,.signature-approved:focus-visible .signature-art{transform:scale(1.01);filter:none}
 
     .manifesto{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(120deg,#0a0907,#151109 55%,#080807)}
     .manifesto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
@@ -150,8 +146,6 @@
     @media (max-width:620px){
       .signature-grid{grid-template-columns:1fr;gap:18px}
       .signature{aspect-ratio:10/11;min-height:0}
-      .signature:before{background:linear-gradient(to top,rgba(3,3,3,.99) 0%,rgba(3,3,3,.9) 24%,rgba(3,3,3,.45) 48%,rgba(3,3,3,.04) 76%,rgba(3,3,3,.04) 100%)}
-      .signature-approved:before,.signature-approved:after{display:none}
     }
     @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
@@ -335,13 +329,13 @@
 <div class="signature-art"><img alt="Cedrat citrus, green pepper, wild botanicals, suede and incense smoke" decoding="async" loading="lazy" src="assets/wild-sovereign.webp"/></div>
 <div class="signature-role">Instinct</div><div class="signature-copy"><h3>WILD SOVEREIGN</h3><div class="signature-line">Refinement, undomesticated.</div><p class="signature-arc">Botanical light → apricot suede → warm skin → smoke.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div></div>
 </a>
-<a class="signature signature-silver signature-approved" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
-<div class="signature-art"><img alt="Approved Vesper Glass signature card — metal, flower and skin" decoding="async" loading="lazy" src="assets/vesper-glass-card-v20260819.webp"/></div>
-<span class="sr-only"><span>Transformation</span><span>Vesper Glass</span><span>Metal, flower and skin.</span></span>
+<a class="signature signature-silver" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
+<div class="signature-art"><img alt="Smoky architectural glass, silver mineral light, pale iris haze, and restrained warmth" decoding="async" loading="lazy" src="assets/vesper-glass-signature.svg"/></div>
+<div class="signature-role">Transformation</div><div class="signature-copy"><h3>VESPER GLASS</h3><div class="signature-line">A fragrance that begins like an object and ends like a body.</div><p class="signature-arc">Metal → flower → skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div></div>
 </a>
-<a class="signature signature-light signature-approved" href="fragrances/vermillionaire/" aria-label="Explore VERMILLIONAIRE — Radiance">
-<div class="signature-art"><img alt="Approved VERMILLIONAIRE signature card — vermilion citrus, salt and sun-warmed skin" decoding="async" loading="lazy" src="assets/vermillionaire-card-v20260819.webp"/></div>
-<span class="sr-only"><span>Radiance</span><span>VERMILLIONAIRE</span><span>Vermilion citrus, salt and sun-warmed skin.</span></span>
+<a class="signature signature-light" href="fragrances/vermillionaire/" aria-label="Explore VERMILLIONAIRE — Radiance">
+<div class="signature-art"><img alt="Vermilion citrus light, mineral air, bitter green peel, and sun-warmed skin" decoding="async" loading="lazy" src="assets/vermillionaire-signature.svg"/></div>
+<div class="signature-role">Radiance</div><div class="signature-copy"><h3>VERMILLIONAIRE</h3><div class="signature-line">Sunlight, cut with salt.</div><p class="signature-arc">Vermilion peel → salt-lit air → sun-warmed skin.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div></div>
 </a>
 </div>
 </div>
