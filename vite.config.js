@@ -18,6 +18,7 @@ export default defineConfig({
         sovereignTide: resolve(root, "fragrances/sovereign-tide/index.html"),
         velvetPulse: resolve(root, "fragrances/velvet-pulse/index.html"),
         summerNova: resolve(root, "fragrances/summer-nova/index.html"),
+        velvetJade: resolve(root, "fragrances/velvet-jade/index.html"),
       },
     },
   },
