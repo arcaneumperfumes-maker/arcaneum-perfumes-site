@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -7,9 +6,25 @@
 <meta content="#070706" name="theme-color"/>
 <meta content="ARCANEUM Perfumes — independent fine fragrance built around transformation, tension, and distinctive olfactory worlds." name="description"/>
 <title>ARCANEUM Perfumes — Independent Fine Fragrance</title>
+<link rel="canonical" href="https://arcaneumperfumes.com/"/>
+<link rel="icon" href="assets/crest.webp" type="image/webp"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="ARCANEUM Perfumes"/>
+<meta property="og:title" content="ARCANEUM Perfumes — Independent Fine Fragrance"/>
+<meta property="og:description" content="Independent fine fragrance built around transformation, tension, and distinctive olfactory worlds."/>
+<meta property="og:url" content="https://arcaneumperfumes.com/"/>
+<meta property="og:image" content="https://arcaneumperfumes.com/assets/wordmark.webp"/>
+<meta property="og:image:alt" content="ARCANEUM Perfumes gold crest and wordmark"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="ARCANEUM Perfumes — Independent Fine Fragrance"/>
+<meta name="twitter:description" content="Independent fine fragrance built around transformation, tension, and distinctive olfactory worlds."/>
+<meta name="twitter:image" content="https://arcaneumperfumes.com/assets/wordmark.webp"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"ARCANEUM Perfumes","url":"https://arcaneumperfumes.com/","logo":"https://arcaneumperfumes.com/assets/crest.webp","email":"arcaneumperfumes@gmail.com","description":"Independent fine fragrance built around transformation, tension, and distinctive olfactory worlds."}
+</script>
 <style>
     :root {
       --black:#070706; --ink:#11100e; --ivory:#f3efe5; --gold:#c6a85c;
@@ -21,6 +36,9 @@
     a{color:inherit;text-decoration:none}
     img,svg{display:block;max-width:100%}
     .shell{width:min(1180px,calc(100% - 36px));margin:auto}
+    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    .skip-link{position:fixed;z-index:1000;top:10px;left:10px;padding:10px 14px;background:var(--gold);color:#11100e;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;transform:translateY(-180%);transition:transform .2s}
+    .skip-link:focus{transform:none}
     .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:var(--gold2)}
     h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0}
     h1{font-size:clamp(3.1rem,10vw,8.3rem);line-height:.82;letter-spacing:.01em}
@@ -28,11 +46,15 @@
     p{line-height:1.75;color:#d2ccc0}
     .gold{color:var(--gold2)}
     header{position:fixed;inset:0 0 auto;z-index:50;background:linear-gradient(#070706 0%,rgba(7,7,6,.78) 72%,transparent);backdrop-filter:blur(8px)}
-    nav{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    nav{position:relative;height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
     .mark{display:flex;align-items:center;gap:13px;letter-spacing:.2em;font-size:.75rem}
     .mark img{width:54px;height:54px;object-fit:contain}
     .navlinks{display:flex;gap:28px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
     .navlinks a{opacity:.72;transition:.25s}.navlinks a:hover{opacity:1;color:var(--gold2)}
+    .menu-toggle{display:none;width:44px;height:44px;align-items:center;justify-content:center;padding:0;border:1px solid rgba(198,168,92,.32);background:transparent;color:var(--ivory);cursor:pointer}
+    .menu-icon,.menu-icon:before,.menu-icon:after{display:block;width:18px;height:1px;background:currentColor;content:"";transition:transform .2s,opacity .2s}
+    .menu-icon{position:relative}.menu-icon:before{position:absolute;top:-6px}.menu-icon:after{position:absolute;top:6px}
+    header.nav-open .menu-icon{background:transparent}header.nav-open .menu-icon:before{top:0;transform:rotate(45deg)}header.nav-open .menu-icon:after{top:0;transform:rotate(-45deg)}
     .hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;padding:130px 0 70px}
     .hero:before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 52% 38%,rgba(198,168,92,.17),transparent 24%),radial-gradient(circle at 75% 70%,rgba(88,58,31,.18),transparent 22%),linear-gradient(130deg,#050504 20%,#12100b 50%,#050504 80%);filter:saturate(.8)}
     .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.017) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.017) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent)}
@@ -106,8 +128,9 @@
     .contact{text-align:center}
     .contact p{max-width:680px;margin:24px auto 34px}
     footer{border-top:1px solid var(--line);padding:32px 0 46px;color:#918979;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
-    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .foot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
     .foot img{width:58px}
+    .foot a{color:#b7ae9e}.foot a:hover,.foot a:focus-visible{color:var(--gold2)}
     @media (max-width:1020px){.signature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signature{aspect-ratio:10/11}}
     @media (max-width:800px){
       nav{height:70px}.navlinks{display:none}.mark span{display:none}
@@ -185,6 +208,12 @@
       header{background:rgba(7,7,6,.985);box-shadow:0 8px 28px rgba(0,0,0,.22)}
       nav,header.is-scrolled nav{height:56px}
       .mark img,header.is-scrolled .mark img{width:36px;height:36px}
+      .menu-toggle{display:inline-flex}
+      .navlinks{display:flex;position:absolute;top:calc(100% + 1px);right:0;width:min(280px,calc(100vw - 32px));padding:14px;flex-direction:column;gap:2px;border:1px solid rgba(198,168,92,.32);background:rgba(8,8,7,.99);box-shadow:0 24px 55px rgba(0,0,0,.48);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:opacity .2s,transform .2s,visibility .2s}
+      .navlinks a{display:flex;min-height:46px;align-items:center;padding:0 12px;border-bottom:1px solid rgba(198,168,92,.12);opacity:.92}
+      .navlinks a:last-child{border-bottom:0}
+      header.nav-open .navlinks{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+      header.nav-open{background:#070706}
       .hero{padding:82px 0 58px}
       .hero-logo{width:min(258px,68vw);margin-bottom:22px}
       .hero-title{font-size:clamp(2.72rem,12.4vw,3.45rem);line-height:.82;letter-spacing:.008em;width:100%}
@@ -244,7 +273,8 @@
     .form-submit{flex:0 0 auto;border:1px solid var(--gold);cursor:pointer;font-family:Manrope,Arial,sans-serif}
     .form-submit span{margin-left:12px;font-size:1rem;line-height:1}
     .form-submit:disabled{opacity:.62;cursor:wait;transform:none;box-shadow:none}
-    .form-note{max-width:250px;color:#8f8779;font-size:.72rem;line-height:1.55}
+    .form-note{max-width:280px;color:#8f8779;font-size:.72rem;line-height:1.55}
+    .form-note a{color:#bfb5a3;text-decoration:underline;text-underline-offset:3px}
     .form-status{position:relative;margin-top:18px;padding:13px 15px;border-left:2px solid var(--gold);background:rgba(198,168,92,.08);color:#ded5c5;font-size:.82rem;line-height:1.55}
     .form-status[hidden]{display:none}
     @media (max-width:960px){
@@ -268,16 +298,18 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#top">Skip to content</a>
 <header>
-<nav class="shell">
+<nav class="shell" aria-label="Primary navigation">
 <a class="mark" href="#top"><img alt="ARCANEUM crest" src="assets/crest.webp"/><span>ARCANEUM PERFUMES</span></a>
-<div class="navlinks"><a href="#collection">Collection</a><a href="#house">The House</a><a href="#contact">Contact</a></div>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"></span></button>
+<div class="navlinks" id="primary-nav"><a href="#collection">Collection</a><a href="#house">The House</a><a href="#contact">Contact</a></div>
 </nav>
 </header>
-<main id="top">
+<main id="top" tabindex="-1">
 <section class="hero">
 <div class="hero-inner shell">
-<img alt="ARCANEUM Perfumes original gold crest logo" class="hero-logo" src="assets/wordmark.webp"/>
+<img alt="ARCANEUM Perfumes original gold crest logo" class="hero-logo" src="assets/wordmark.webp" fetchpriority="high"/>
 <div class="eyebrow">Independent Fine Fragrance</div>
 <h1 class="hero-title"><span>SCENT</span><span>WITH</span><span class="gold">SOVEREIGNTY.</span></h1>
 <p class="hero-copy">Fragrance built around transformation. Cold becomes skin. Light becomes warmth. Refinement gives way to instinct. Every ARCANEUM fragrance begins with one unforgettable tension—and follows it until the air remembers what changed.</p>
@@ -304,10 +336,12 @@
 <div class="signature-role">Instinct</div><div class="signature-copy"><h3>WILD SOVEREIGN</h3><div class="signature-line">Refinement, undomesticated.</div><p class="signature-arc">Botanical light → apricot suede → warm skin → smoke.</p><div class="signature-link">Enter the story <span aria-hidden="true">→</span></div></div>
 </a>
 <a class="signature signature-silver signature-approved" href="fragrances/vesper-glass/" aria-label="Explore Vesper Glass — Transformation">
-<div class="signature-art"><img alt="Approved Vesper Glass signature card — metal, flower and skin" decoding="async" loading="eager" src="assets/vesper-glass-card-v20260819.webp"/></div>
+<div class="signature-art"><img alt="Approved Vesper Glass signature card — metal, flower and skin" decoding="async" loading="lazy" src="assets/vesper-glass-card-v20260819.webp"/></div>
+<span class="sr-only"><span>Transformation</span><span>Vesper Glass</span><span>Metal, flower and skin.</span></span>
 </a>
 <a class="signature signature-light signature-approved" href="fragrances/vermillionaire/" aria-label="Explore VERMILLIONAIRE — Radiance">
-<div class="signature-art"><img alt="Approved VERMILLIONAIRE signature card — vermilion citrus, salt and sun-warmed skin" decoding="async" loading="eager" src="assets/vermillionaire-card-v20260819.webp"/></div>
+<div class="signature-art"><img alt="Approved VERMILLIONAIRE signature card — vermilion citrus, salt and sun-warmed skin" decoding="async" loading="lazy" src="assets/vermillionaire-card-v20260819.webp"/></div>
+<span class="sr-only"><span>Radiance</span><span>VERMILLIONAIRE</span><span>Vermilion citrus, salt and sun-warmed skin.</span></span>
 </a>
 </div>
 </div>
@@ -318,7 +352,7 @@
 <div class="collection-head"><div><div class="eyebrow">In the Atelier</div><h2>Other Olfactory Worlds</h2></div><p>Beyond the four house signatures, these additional worlds extend ARCANEUM into their own atmospheres, tensions, and directions.</p></div>
 <div class="grid">
 <a aria-label="Enter the Crimson Grove story" class="card" href="fragrances/crimson-grove/">
-<div class="badge">Coming Soon</div><div class="card-art"><img alt="Dark cherries and plums glowing in an ancient evergreen forest" class="art-svg" decoding="async" loading="lazy" src="assets/crimson-grove.webp"/></div><div class="card-copy"><div class="eyebrow">Dark orchard / cold conifer woods</div><h3>CRIMSON GROVE</h3><div class="tension">Fruit burning red beneath ancient trees.</div><div class="notes">Black cherry · plum · dark rose · evergreen · cold woods · amber</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
+<div class="badge">In Development</div><div class="card-art"><img alt="Dark cherries and plums glowing in an ancient evergreen forest" class="art-svg" decoding="async" loading="lazy" src="assets/crimson-grove.webp"/></div><div class="card-copy"><div class="eyebrow">Dark orchard / cold conifer woods</div><h3>CRIMSON GROVE</h3><div class="tension">Fruit burning red beneath ancient trees.</div><div class="notes">Black cherry · plum · dark rose · evergreen · cold woods · amber</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 <a aria-label="Enter the Sovereign Tide story" class="card" href="fragrances/sovereign-tide/">
 <div class="badge">In Development</div><div class="card-art"><img alt="Marine algae, wet earth, mushroom, driftwood, resin and storm-dark water" class="art-svg" decoding="async" loading="lazy" src="assets/sovereign-tide.webp"/></div><div class="card-copy"><div class="eyebrow">Polished natural luxury / strange marine earth</div><h3>SOVEREIGN TIDE</h3><div class="tension">The sea meets the living floor of the forest.</div><div class="notes">Marine algae · wet earth · mushroom · driftwood · sandalwood · resin</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
@@ -327,7 +361,7 @@
 <div class="badge">In Development</div><div class="card-art"><img alt="Rose petals, green leaves, velvet, powder and intimate warm musk" class="art-svg" decoding="async" loading="lazy" src="assets/velvet-pulse.webp"/></div><div class="card-copy"><div class="eyebrow">Sparkling motion / plush skin intimacy</div><h3>VELVET PULSE</h3><div class="tension">Electric green light beneath soft skin.</div><div class="notes">Green leaves · airy rose · suede · powder · sandalwood · skin musk</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 <a aria-label="Enter the Summer Nova story" class="card" href="fragrances/summer-nova/">
-<div class="badge">Coming Soon</div><div class="card-art"><img alt="Grapefruit, tropical flowers, salt crystals, volcanic wood and golden solar light" class="art-svg" decoding="async" loading="lazy" src="assets/summer-nova.webp"/></div><div class="card-copy"><div class="eyebrow">Tropical radiance / modern dry freshness</div><h3>SUMMER NOVA</h3><div class="tension">Solar life crossing black salt air.</div><div class="notes">Grapefruit-green air · tropical heat · solar facets · black salt · dry timber</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
+<div class="badge">In Development</div><div class="card-art"><img alt="Grapefruit, tropical flowers, salt crystals, volcanic wood and golden solar light" class="art-svg" decoding="async" loading="lazy" src="assets/summer-nova.webp"/></div><div class="card-copy"><div class="eyebrow">Tropical radiance / modern dry freshness</div><h3>SUMMER NOVA</h3><div class="tension">Solar life crossing black salt air.</div><div class="notes">Grapefruit-green air · tropical heat · solar facets · black salt · dry timber</div><span class="card-cta">Enter the story <span aria-hidden="true">→</span></span></div>
 </a>
 </div>
 </div>
@@ -389,19 +423,36 @@
 <input aria-hidden="true" autocomplete="off" name="website" tabindex="-1" type="text" style="position:absolute;left:-10000px;width:1px;height:1px;opacity:0"/>
 <div class="form-actions">
 <button class="btn primary form-submit" type="submit" aria-describedby="form-note">Send my request <span aria-hidden="true">→</span></button>
-<span class="form-note" id="form-note">Sent directly to ARCANEUM. No email app required.</span>
+<span class="form-note" id="form-note">Sent directly to ARCANEUM. No email app required. <a href="privacy.html">Privacy</a>.</span>
 </div>
 <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
 </form>
 </div>
 </section>
 </main>
-<footer><div class="shell foot"><img alt="ARCANEUM crest" src="assets/crest.webp"/><div>© 2026 ARCANEUM PERFUMES. ALL RIGHTS RESERVED.</div><div>Independent Fine Fragrance</div></div></footer>
+<footer><div class="shell foot"><img alt="ARCANEUM crest" src="assets/crest.webp" loading="lazy"/><div>© 2026 ARCANEUM PERFUMES. ALL RIGHTS RESERVED.</div><a href="privacy.html">Privacy</a><div>Independent Fine Fragrance</div></div></footer>
 
 <script>
   (() => {
     const header = document.querySelector('header');
-    const update = () => header.classList.toggle('is-scrolled', window.scrollY > 40);
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('#primary-nav');
+    const closeMenu = () => {
+      header?.classList.remove('nav-open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+      menuToggle?.setAttribute('aria-label', 'Open navigation');
+    };
+    menuToggle?.addEventListener('click', () => {
+      const opening = !header?.classList.contains('nav-open');
+      header?.classList.toggle('nav-open', opening);
+      menuToggle.setAttribute('aria-expanded', String(opening));
+      menuToggle.setAttribute('aria-label', opening ? 'Close navigation' : 'Open navigation');
+    });
+    navLinks?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+    addEventListener('resize', () => { if (innerWidth > 800) closeMenu(); }, {passive:true});
+
+    const update = () => header?.classList.toggle('is-scrolled', window.scrollY > 40);
     update();
     addEventListener('scroll', update, {passive:true});
 
