@@ -9,6 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(root, "index.html"),
+        privacy: resolve(root, "privacy.html"),
         rexNoctis: resolve(root, "fragrances/rex-noctis/index.html"),
         vesperGlass: resolve(root, "fragrances/vesper-glass/index.html"),
         wildSovereign: resolve(root, "fragrances/wild-sovereign/index.html"),
