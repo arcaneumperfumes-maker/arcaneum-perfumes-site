@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "canonical_domain": "arcaneumperfumes.com",
+  "canonical_repository": "arcaneumperfumes-maker/arcaneum-perfumes-site",
+  "phrases": [
+    {
+      "id": "house-sovereignty",
+      "text": "SCENT WITH SOVEREIGNTY.",
+      "normalized_sha256": "7b69798267ccf88bd1f21fdc093336309800ab21897c13ab73c2f14c6c716eee"
+    },
+    {
+      "id": "house-transformation",
+      "text": "Every ARCANEUM fragrance begins with one unforgettable tension—and follows it until the air remembers what changed.",
+      "normalized_sha256": "dc3916cbf1ffd4a0080a703925921ed29680d85b902bb251d86cc88d1da999d6"
+    },
+    {
+      "id": "vesper-glass-body",
+      "text": "A fragrance that begins like an object and ends like a body.",
+      "normalized_sha256": "e8a93c3d7d0ea5ac18ee4fc9b3a1d4eafdc70ed8a2829f44e2a5525eb518d602"
+    },
+    {
+      "id": "rex-noctis-crown",
+      "text": "Silence wears the crown.",
+      "normalized_sha256": "8459e675a5eea394e32c3d3cc901f4e901f58e66453b88e5361fbad2aa433390"
+    },
+    {
+      "id": "wild-sovereign-refinement",
+      "text": "Refinement, undomesticated.",
+      "normalized_sha256": "ff982324a8ffffc4332f0fa1bc50cdaa5327909f93030abb6824a4af6a7e16e7"
+    },
+    {
+      "id": "vermillionaire-salt",
+      "text": "Sunlight, cut with salt.",
+      "normalized_sha256": "aa982072f1dc0bf4f62385b7011789f25ab2e64f6fb0be7f9a34f7b6d4faaa62"
+    },
+    {
+      "id": "sovereign-tide-worlds",
+      "text": "The sea meets the living floor of the forest.",
+      "normalized_sha256": "90a030a87773c79c6cf5a12673ed1b0446e5cf02f02d611224b08587cccdc960"
+    }
+  ],
+  "images": [
+    {
+      "path": "assets/crest.webp",
+      "sha256": "1196e2c8d0816cff0bba37aff57604e59c97ae5aff708e0aebc8c8df535c52b0",
+      "bytes": 243500
+    },
+    {
+      "path": "assets/wordmark.webp",
+      "sha256": "0fc403f6a78900a896f43816ea0feeb7105fa4f1d5312df6d8fd162c2716c8b5",
+      "bytes": 299230
+    },
+    {
+      "path": "assets/rex-noctis.webp",
+      "sha256": "96302fca251969ab6a3fff115434d28e1b996c93dbfd75bb53a40d9a98c128cf",
+      "bytes": 67518
+    },
+    {
+      "path": "assets/wild-sovereign.webp",
+      "sha256": "4b47290ba5eadd1b615e9be28a2f7aca35348e4ea8148b93ef9e2dc2aa251121",
+      "bytes": 95346
+    },
+    {
+      "path": "assets/vesper-glass-signature.svg",
+      "sha256": "77caf1a47481a0f617e65e6876b17aa8a948f733f9fa47fee49cc099fdad8154",
+      "bytes": 17949
+    },
+    {
+      "path": "assets/vermillionaire-signature.svg",
+      "sha256": "4e8863a88d6d82c3574c606c8640a36842343b28eeff51f124ed1ff9d83d30e4",
+      "bytes": 11845
+    },
+    {
+      "path": "assets/velvet-jade.webp",
+      "sha256": "418aa75155986b6170cf6a523482c8ffe6019eb13d6cd970f6cd43624db03faa",
+      "bytes": 2632
+    }
+  ],
+  "repository": {
+    "sha256": "09f752460175ddf6159a8c77ef501f8fc53b3131c89999815c31472e6d935ac4",
+    "files": [
+      {
+        "path": "analytics.js",
+        "sha256": "dc07d121892be0b6b28a00a694d65771df542d013450a148260289d1c8944414"
+      },
+      {
+        "path": "assets/crest.webp",
+        "sha256": "1196e2c8d0816cff0bba37aff57604e59c97ae5aff708e0aebc8c8df535c52b0"
+      },
+      {
+        "path": "assets/crimson-grove.webp",
+        "sha256": "29c52057dda8b8550a54ab18dc2abc277cd171131518059f16a742611f77d65a"
+      },
+      {
+        "path": "assets/rex-noctis.webp",
+        "sha256": "96302fca251969ab6a3fff115434d28e1b996c93dbfd75bb53a40d9a98c128cf"
+      },
+      {
+        "path": "assets/sovereign-tide.webp",
+        "sha256": "10491eb2e584b0c6ee5f8e54e16b7215bf5e6351b05fdae9a2abdb9f290c2e07"
+      },
+      {
+        "path": "assets/summer-nova.webp",
+        "sha256": "471ae485578f2ba808826ec206e41370e5925a48d2a960c2164c86a77f26f8c0"
+      },
+      {
+        "path": "assets/velvet-jade.webp",
+        "sha256": "418aa75155986b6170cf6a523482c8ffe6019eb13d6cd970f6cd43624db03faa"
+      },
+      {
+        "path": "assets/velvet-pulse.webp",
+        "sha256": "028fb93108edbe14496ac1cf00db2e46d2ef90c9342fe03c046920d19a8472e0"
+      },
+      {
+        "path": "assets/vermillionaire-card-v20260819.webp",
+        "sha256": "ed37452fa940a98b2dc2f612adf1be7be4a5d8959e332379ec9fcfcc10caa8d4"
+      },
+      {
+        "path": "assets/vermillionaire-signature.svg",
+        "sha256": "4e8863a88d6d82c3574c606c8640a36842343b28eeff51f124ed1ff9d83d30e4"
+      },
+      {
+        "path": "assets/vesper-glass-card-v20260819.webp",
+        "sha256": "d08447b3016c0202cf44367c397ac836cbb5f02a33fdfd5341c4d3e9024eb2c5"
+      },
+      {
+        "path": "assets/vesper-glass-signature.svg",
+        "sha256": "77caf1a47481a0f617e65e6876b17aa8a948f733f9fa47fee49cc099fdad8154"
+      },
+      {
+        "path": "assets/wild-sovereign.webp",
+        "sha256": "4b47290ba5eadd1b615e9be28a2f7aca35348e4ea8148b93ef9e2dc2aa251121"
+      },
+      {
+        "path": "assets/wordmark.webp",
+        "sha256": "0fc403f6a78900a896f43816ea0feeb7105fa4f1d5312df6d8fd162c2716c8b5"
+      },
+      {
+        "path": "fragrances/crimson-grove/index.html",
+        "sha256": "df7017a3785947827b17abf77fc24fd41f54cb957f3b1d4cd32095d018755790"
+      },
+      {
+        "path": "fragrances/rex-noctis/index.html",
+        "sha256": "54f1e96a964d9073122cbf580082f0ca46dc4bfa6bc2488af427c0df705f99f3"
+      },
+      {
+        "path": "fragrances/sovereign-tide/index.html",
+        "sha256": "bf757a9ea9c28c3613b577ae1e017974d8bba59a5b2e1ba8c3a097da04e6f261"
+      },
+      {
+        "path": "fragrances/story.css",
+        "sha256": "4dbc8e3768bb0142a82647448d2f26b76620b7f5439820fa3f9b7862758c9fe0"
+      },
+      {
+        "path": "fragrances/story.js",
+        "sha256": "2bfeb399ecffbc6c67a9394d296aed4639051d725de3ad2e8fdbad977c7eec42"
+      },
+      {
+        "path": "fragrances/summer-nova/index.html",
+        "sha256": "4dc000b3d7d0fcfa5280046ccad37d095912b1883692a59a09e3146d545a00e6"
+      },
+      {
+        "path": "fragrances/velvet-jade/index.html",
+        "sha256": "4ae1b776f4fe7b581f8ed14bd8b74fdb7ee46215a0ef8b073156e27ad261d78a"
+      },
+      {
+        "path": "fragrances/velvet-pulse/index.html",
+        "sha256": "b56ed01bde3497af5dd65d8b79f9a9b932c2a0eba372e20e9e5c1cccdbfe9b64"
+      },
+      {
+        "path": "fragrances/vermillionaire/index.html",
+        "sha256": "462dcd141333ef40b6bfddbdf81ad2cb94a030de4ee2bfebbcf786380bc51500"
+      },
+      {
+        "path": "fragrances/vesper-glass/index.html",
+        "sha256": "fab5acd34cd6e6ee67b70b1709e0f4dab4eb7ea3130c933923604dd993ccf4ee"
+      },
+      {
+        "path": "fragrances/wild-sovereign/index.html",
+        "sha256": "7e6c8922dc4220f4f009bde30b12d53a6322adb172fe0623376d23a51f591467"
+      },
+      {
+        "path": "index.html",
+        "sha256": "ad8cc6be53123f4f6b9fa5ee650b14cbca9e5e365ae3f706bf5d2e1d5664c1cc"
+      },
+      {
+        "path": "privacy.html",
+        "sha256": "02d602dd8864a5b20f0bd7042dee51159eb99b395f15f158979f0c8a88ec9c65"
+      }
+    ]
+  },
+  "lookalike_domains": [
+    "rcaneumperfumes.com",
+    "rcaneumperfumes.co",
+    "rcaneumperfumes.net",
+    "rcaneumperfumes.org",
+    "aarcaneumperfumes.com",
+    "aarcaneumperfumes.co",
+    "aarcaneumperfumes.net",
+    "aarcaneumperfumes.org",
+    "racaneumperfumes.com",
+    "racaneumperfumes.co",
+    "racaneumperfumes.net",
+    "racaneumperfumes.org",
+    "acaneumperfumes.com",
+    "acaneumperfumes.co",
+    "acaneumperfumes.net",
+    "acaneumperfumes.org",
+    "arrcaneumperfumes.com",
+    "arrcaneumperfumes.co",
+    "arrcaneumperfumes.net",
+    "arrcaneumperfumes.org",
+    "acraneumperfumes.com",
+    "acraneumperfumes.co",
+    "acraneumperfumes.net",
+    "acraneumperfumes.org",
+    "araneumperfumes.com",
+    "araneumperfumes.co",
+    "araneumperfumes.net",
+    "araneumperfumes.org",
+    "arccaneumperfumes.com",
+    "arccaneumperfumes.co",
+    "arccaneumperfumes.net",
+    "arccaneumperfumes.org",
+    "aracneumperfumes.com",
+    "aracneumperfumes.co",
+    "aracneumperfumes.net",
+    "aracneumperfumes.org",
+    "arcneumperfumes.com",
+    "arcneumperfumes.co",
+    "arcneumperfumes.net",
+    "arcneumperfumes.org",
+    "arcaaneumperfumes.com",
+    "arcaaneumperfumes.co",
+    "arcaaneumperfumes.net",
+    "arcaaneumperfumes.org",
+    "arcnaeumperfumes.com",
+    "arcnaeumperfumes.co",
+    "arcnaeumperfumes.net",
+    "arcnaeumperfumes.org",
+    "arcaeumperfumes.com",
+    "arcaeumperfumes.co",
+    "arcaeumperfumes.net",
+    "arcaeumperfumes.org",
+    "arcanneumperfumes.com",
+    "arcanneumperfumes.co",
+    "arcanneumperfumes.net",
+    "arcanneumperfumes.org",
+    "arcaenumperfumes.com",
+    "arcaenumperfumes.co",
+    "arcaenumperfumes.net",
+    "arcaenumperfumes.org",
+    "arcanumperfumes.com",
+    "arcanumperfumes.co",
+    "arcanumperfumes.net",
+    "arcanumperfumes.org",
+    "arcaneeumperfumes.com",
+    "arcaneeumperfumes.co",
+    "arcaneeumperfumes.net",
+    "arcaneeumperfumes.org",
+    "arcanuemperfumes.com",
+    "arcanuemperfumes.co",
+    "arcanuemperfumes.net",
+    "arcanuemperfumes.org",
+    "arcanemperfumes.com",
+    "arcanemperfumes.co",
+    "arcanemperfumes.net",
+    "arcanemperfumes.org",
+    "arcaneuumperfumes.com",
+    "arcaneuumperfumes.co",
+    "arcaneuumperfumes.net",
+    "arcaneuumperfumes.org"
+  ]
+}

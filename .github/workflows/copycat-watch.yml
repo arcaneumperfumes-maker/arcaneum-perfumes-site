@@ -1,0 +1,41 @@
+name: Copycat Watch
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 13 * * 5"
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: node scripts/build-copycat-baseline.mjs --check
+      - name: Offline Copycat Watch preflight
+        if: github.event_name == 'pull_request'
+        run: node scripts/scan-copycat-watch.mjs --report=artifacts/copycat-watch-report.json
+      - name: Scan protected ARCANEUM assets
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COPYCAT_WATCH_URLS: ${{ vars.COPYCAT_WATCH_URLS }}
+        run: node scripts/scan-copycat-watch.mjs --live --report=artifacts/copycat-watch-report.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: copycat-watch-report
+          path: artifacts/copycat-watch-report.json
+          retention-days: 90

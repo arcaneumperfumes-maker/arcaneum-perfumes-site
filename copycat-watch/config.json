@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "brand": {
+    "name": "ARCANEUM Perfumes",
+    "canonical_domain": "arcaneumperfumes.com",
+    "canonical_repository": "arcaneumperfumes-maker/arcaneum-perfumes-site"
+  },
+  "protected_phrases": [
+    {
+      "id": "house-sovereignty",
+      "text": "SCENT WITH SOVEREIGNTY."
+    },
+    {
+      "id": "house-transformation",
+      "text": "Every ARCANEUM fragrance begins with one unforgettable tension—and follows it until the air remembers what changed."
+    },
+    {
+      "id": "vesper-glass-body",
+      "text": "A fragrance that begins like an object and ends like a body."
+    },
+    {
+      "id": "rex-noctis-crown",
+      "text": "Silence wears the crown."
+    },
+    {
+      "id": "wild-sovereign-refinement",
+      "text": "Refinement, undomesticated."
+    },
+    {
+      "id": "vermillionaire-salt",
+      "text": "Sunlight, cut with salt."
+    },
+    {
+      "id": "sovereign-tide-worlds",
+      "text": "The sea meets the living floor of the forest."
+    }
+  ],
+  "protected_images": [
+    "assets/crest.webp",
+    "assets/wordmark.webp",
+    "assets/rex-noctis.webp",
+    "assets/wild-sovereign.webp",
+    "assets/vesper-glass-signature.svg",
+    "assets/vermillionaire-signature.svg",
+    "assets/velvet-jade.webp"
+  ],
+  "repository_fingerprint_roots": [
+    "index.html",
+    "privacy.html",
+    "analytics.js",
+    "assets",
+    "fragrances"
+  ],
+  "lookalike_domains": {
+    "tlds": ["com", "co", "net", "org"],
+    "maximum_candidates": 80
+  },
+  "watch_urls": []
+}

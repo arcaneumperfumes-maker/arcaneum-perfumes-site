@@ -4,7 +4,56 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 
+function analyticsPreviewHarness() {
+  const events = [];
+  return {
+    name: "arcaneum-analytics-preview-harness",
+    apply: "serve",
+    configureServer(server) {
+      server.middlewares.use((request, response, next) => {
+        if (request.url !== "/arcaneum-intake" || request.method !== "POST") {
+          next();
+          return;
+        }
+
+        let body = "";
+        request.setEncoding("utf8");
+        request.on("data", (chunk) => {
+          body += chunk;
+        });
+        request.on("end", () => {
+          try {
+            const event = JSON.parse(body);
+            if (Object.keys(event).some((key) => key.toLowerCase().includes("ip"))) {
+              response.statusCode = 422;
+              response.end();
+              return;
+            }
+            events.push(event);
+            response.statusCode = 201;
+            response.end();
+          } catch {
+            response.statusCode = 400;
+            response.end();
+          }
+        });
+      });
+    },
+    transformIndexHtml() {
+      return [
+        {
+          tag: "script",
+          injectTo: "head-prepend",
+          children:
+            `window.__ARCANEUM_ANALYTICS_CONFIG__={endpoint:new URL("/arcaneum-intake",location.origin).href,publishableKey:"preview-test-key"};window.__ARCANEUM_PREVIEW_EVENTS__=${JSON.stringify(events)};`,
+        },
+      ];
+    },
+  };
+}
+
 export default defineConfig({
+  plugins: [analyticsPreviewHarness()],
   build: {
     rollupOptions: {
       input: {

@@ -1,3 +1,5 @@
+import "../analytics.js";
+
 document.documentElement.classList.add("js");
 
 const header = document.querySelector(".site-header");
