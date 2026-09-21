@@ -464,6 +464,27 @@
     update();
     addEventListener('scroll', update, {passive:true});
 
+    const previewHashes = new Set(['#contact', '#private-preview-form']);
+    const initialPreviewHash = previewHashes.has(window.location.hash) ? window.location.hash : '';
+    const alignInitialPreviewHash = () => {
+      if (!initialPreviewHash) return;
+      const target = document.querySelector(initialPreviewHash);
+      if (!target) return;
+
+      const root = document.documentElement;
+      root.style.scrollBehavior = 'auto';
+      target.scrollIntoView({block:'start'});
+      requestAnimationFrame(() => {
+        target.scrollIntoView({block:'start'});
+        root.style.removeProperty('scroll-behavior');
+      });
+    };
+    if (initialPreviewHash) {
+      alignInitialPreviewHash();
+      addEventListener('load', alignInitialPreviewHash, {once:true});
+      document.fonts?.ready.then(alignInitialPreviewHash);
+    }
+
     const SUPABASE_URL = 'https://xfefiwmzzvuacnxfoyrq.supabase.co';
     const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_DbNhTV5AwiAWvZqDsGILGw_3swtoHsQ';
     const form = document.querySelector('#private-preview-form');
